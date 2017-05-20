@@ -1,0 +1,45 @@
+<%= form_for(@bus) do |f| %>
+  <% if @bus.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bus.errors.count, "error") %> prohibited this bus from being saved:</h2>
+
+      <ul>
+      <% @bus.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :city1 %><br>
+    <%= f.text_field :city1 %>
+  </div>
+  <div class="field">
+    <%= f.label :date1 %><br>
+    <%= f.date_select :date1 %>
+  </div>
+  <div class="field">
+    <%= f.label :time1 %><br>
+    <%= f.time_select :time1 %>
+  </div>
+  <div class="field">
+    <%= f.label :city2 %><br>
+    <%= f.text_field :city2 %>
+  </div>
+  <div class="field">
+    <%= f.label :date2 %><br>
+    <%= f.date_select :date2 %>
+  </div>
+  <div class="field">
+    <%= f.label :time2 %><br>
+    <%= f.time_select :time2 %>
+  </div>
+  <div class="field">
+    <%= f.label :seats %><br>
+    <%= f.number_field :seats %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

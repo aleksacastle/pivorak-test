@@ -1,0 +1,35 @@
+<h1>Search result</h1>
+<p><%=link_to "Back", new_search_path %></p>
+<table>
+  <thead>
+    <tr>
+      <th>City1</th>
+      <th>Date1</th>
+      <th>Time1</th>
+      <th>City2</th>
+      <th>Date2</th>
+      <th>Time2</th>
+      <th>Seats</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<% if @search.search_buses.empty? %>
+<p>Нет рейсов по Вашему запросу</p>
+<% else %>
+<% @search.search_buses.each do |bus| %>
+ <tr>
+        <td><%= bus.city1 %></td>
+        <td><%= bus.date1 %></td>
+        <td><%= bus.time1 %></td>
+        <td><%= bus.city2 %></td>
+        <td><%= bus.date2 %></td>
+        <td><%= bus.time2 %></td>
+        <td><%= bus.seats %></td>
+         <td><%= link_to 'Show', bus %></td>
+         
+         
+        
+      </tr>
+       <% end %>
+   <% end %>
+
