@@ -35,7 +35,7 @@
   <%= @bus.seats %>
 
 </p>
-<td><%= link_to 'Buy', new_bus_ticket_path(@bus) %> </td>
+<td><%= link_to 'Buy', new_bus_ticket_path(@bus) %> </td> |
 <% if can? :update, Bus %>
 <%= link_to 'Edit', edit_bus_path(@bus) %>  <%end%> |
 <%= link_to 'Back', buses_path %>

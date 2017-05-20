@@ -8,11 +8,7 @@ class Bus < ActiveRecord::Base
         end
     end
     
-    # def update_seats
-    #     if ticket.new
-            
-    #     else
-    #     end
+   
     
   
 end
