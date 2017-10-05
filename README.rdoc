@@ -1,2 +1,0 @@
-== First ruby on rails project. I can do better now :)
-
